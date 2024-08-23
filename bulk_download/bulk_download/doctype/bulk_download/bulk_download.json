@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:BU-{YY}-{MM}-{#####}",
+ "creation": "2024-08-17 16:49:26.071410",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "document_type",
+  "print_format",
+  "code_wskl",
+  "zip_file",
+  "column_break_utnn",
+  "field_name",
+  "error_list",
+  "section_break_tore",
+  "doctype_filter"
+ ],
+ "fields": [
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "print_format",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Print Format",
+   "options": "Print Format",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code_wskl",
+   "fieldtype": "HTML",
+   "label": "HTML"
+  },
+  {
+   "fieldname": "zip_file",
+   "fieldtype": "Attach",
+   "label": "Zip File",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_utnn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Write Field Name of selected doctype for group by based on that field to download zip folder",
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "label": "Field Name (Group By)"
+  },
+  {
+   "fieldname": "error_list",
+   "fieldtype": "Long Text",
+   "label": "Error List",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_tore",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "doctype_filter",
+   "fieldtype": "Code",
+   "label": "Doctype Filter",
+   "options": "JSON",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-08-23 16:04:36.115179",
+ "modified_by": "Administrator",
+ "module": "Bulk Download",
+ "name": "Bulk Download",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
