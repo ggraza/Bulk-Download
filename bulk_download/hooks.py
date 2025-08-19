@@ -148,23 +148,11 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"bulk_download.tasks.all"
-# 	],
-# 	"daily": [
-# 		"bulk_download.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"bulk_download.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"bulk_download.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"bulk_download.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+    "daily": [
+        "bulk_download.utils.cleanup_bulk_downloads"
+    ]
+}
 
 # Testing
 # -------
