@@ -23,6 +23,8 @@ frappe.ui.form.on("Bulk Download", {
     },
 	document_type: function(frm) {
 		frm.trigger("set_parent_document_type");
+		frm.set_value("field_name", "");
+		set_field_options(frm, frm.doc.document_type);
         frm.set_query("print_format", function() {
 			return {
 				"filters": {
@@ -225,3 +227,18 @@ frappe.ui.form.on("Bulk Download", {
 		});
 	},
 });
+
+
+function set_field_options(frm, doctype){
+    frappe.model.with_doctype(doctype, () => {
+        const fields = frappe.meta.get_docfields(doctype) || [];
+
+        const not_allowed_types = ["Section Break", "Column Break", "Table", "Code", "HTML", "Table MultiSelect", "Button"];
+
+        const options = fields
+            .filter(df => df.fieldname && !not_allowed_types.includes(df.fieldtype))
+            .map(df => df.fieldname);
+
+        frm.fields_dict.field_name.set_data(options);
+    });
+}

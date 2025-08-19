@@ -52,7 +52,7 @@
   {
    "description": "Write Field Name of selected doctype for group by based on that field to download zip folder",
    "fieldname": "field_name",
-   "fieldtype": "Data",
+   "fieldtype": "Autocomplete",
    "label": "Field Name (Group By)"
   },
   {
@@ -75,7 +75,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-08-23 16:04:36.115179",
+ "modified": "2025-08-19 17:44:17.283162",
  "modified_by": "Administrator",
  "module": "Bulk Download",
  "name": "Bulk Download",
